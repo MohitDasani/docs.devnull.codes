@@ -3,9 +3,9 @@
 * #### Change Directory
   
   ```bash
-    cd \
+  cd \
   ```
-    ```bash
+  ```bash
     cd devnull
   ```
     ```bash
