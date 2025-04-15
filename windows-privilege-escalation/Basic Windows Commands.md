@@ -417,3 +417,95 @@ xcopy C:\inetpub\*.htm C:\htmfiles\ /s /v /y
     * /w:1 - Waits one second between Retries
     * /ndl - Prevents directories from being listed in the output.
     * /xjd - Excludes junction points (to avoid infinite loops).
+
+</br>
+
+##  Changing File and Folder Attributes Using ATTRIB
+
+The ATTRIB command in windows allows users to modify file and folder such as hidden, system, Read-only and archieve
+
+* Basic Syntax, Displays the attributes of a file
+
+```bash
+attrib [filename/foldername]
+```
+
+* Displays help information for the attrib command.
+
+```bash
+attrib /?
+```
+
+* +H/-H - Adds/Removes the Hidden Attributes
+* +S/-S - Adds/Removes the System Attributes
+* +R/-R - Adds/Removes the Read-Only attribute
+* +A/-A - Adds/Removes the Archieve attribute
+* /S  - Applies changes to all subdirectories
+* /D  - Applies changes to directories
+
+</br>
+
+* Modifying File Attributes, make a file Hidden, System and Read-Only
+
+```bash
+attrib +s +r +h test.txt
+attrib +s +r +h shell.exe
+```
+
+* Remove System, Hidden and Read-Only attributes
+
+```bash
+attrib -s -r -h test.txt
+attrib -s -r -h shell.exe
+```
+
+* Applying attributes to all files in a Directory
+
+```bash
+attrib +s +h +r c:\data\* /s
+attrib +s +h +r e:\* /S /D
+```
+
+* Remove Hidden, System and Read-Only attributes from all files
+
+```bash
+attrib -s -h -r c:\data\* /s
+```
+
+
+* Unhiding all files on a drive
+
+```bash
+attrib -h -s -r *.* /s /d
+```
+
+* protecting a file from accidential deletion
+
+```bash
+attrib +r important.docx
+```
+
+
+</br>
+
+##  Restarting a Windows System immediately without any delay
+
+```bash
+shutdown /r /t 0 /f
+```
+* __/s__ - shutdown the computer
+* __/r__ - Restart the computer
+* __/t 0__ - set the time delay to 0 seconds(immediate restart) 
+* __/f__ - force close all running applications without warning
+
+</br>
+
+* Allow user to cancel shutdown
+
+```bash
+shutdown /a
+```
+
+
+
+
