@@ -6,53 +6,31 @@ the ```ipconfig``` command is used to display and manage network configurations 
 ipconifg
 ```
 
-*   List all network interfaces
+Using Powershell
 
 ```powershell
-ipconfig /all
+Get-NetIPConfiguration | ft InterfaceAlias,InterfaceDescription,IPv4Address
 ```
 
-*  release IPv4 address for the specific adapter.
+List DNS Servers:
 
 ```powershell
-ipconfig /release
+Get-DnsClientServerAddress -AddressFamily IPv4 | ft
 ```
 
-*  release IPv6 for the specific adapter
 
-```powershell
-ipconfig /release6
-```
+|Command|Description|
+|-------|-----------|
+|ipconfig /all|List all network interfaces|
+|ipconfig /release| release IPv4 address for the specific adapter.|
+|ipconfig /release6|release IPv6 for the specific adapter|
+|ipconfig /renew|Renew IPv4 address for the specific adapter|
+|ipconfig /renew6|Renew IPv6 address for the specific adapter|
+|ipconfig /displaydns|Display the contents of DNS resolver Cache|
+|ipconfig /flushdns|Purges the DNS resolver cache|
+|ipconfig /registerdns|Refreshes the DHCP leases and registers DNS names
 
-*  Renew IPv4 address for the specific adapter
-
-```powershell
-ipconfig /renew
-```
-
-*  Renew IPv6 address for the specific adapter
-
-```powershell
-ipconfig /renew6
-```
-
-* Display the contents of DNS resolver Cache
-
-```powershell
-ipconfig /displaydns
-```
-
-*  Purges the DNS resolver cache
-
-```powershell
-ipconfig /flushdns
-```
-
-* Refreshes the DHCP leases and registers DNS names
-
-```powershell
-ipconfig /registerdns
-```
+---
 
 ### Ping
 
@@ -82,6 +60,8 @@ ping -n 1 192.168.29.18
 ping -n 1 -l 65500 192.168.29.18
 ```
 
+---
+
 ### Traceroute
 
 the ``` tracert``` command is used to trace the path or route to a specific remote host.
@@ -92,6 +72,8 @@ the ``` tracert``` command is used to trace the path or route to a specific remo
 tracert 192.168.29.18
 ```
 
+---
+
 ### Pathping
 
 The ```pathping``` command is used to combine the features of ping and tracert, providing information on network latency and packet loss
@@ -99,6 +81,8 @@ The ```pathping``` command is used to combine the features of ping and tracert, 
 ```powershell
 pathping 8.8.8.8
 ```
+
+---
 
 ### ARP (Address Resolution Protocol)
 
@@ -109,6 +93,8 @@ the ```arp``` command is used to view and manage the ARP cache
 ```powershell
 arp -a
 ```
+
+---
 
 ### NSLookup
 
@@ -126,6 +112,8 @@ nslookup 192.168.29.18
 nslookup devnull.codes
 ```
 
+---
+
 ### Route Table
 
 The ```route``` command is used to manipulate the IP routing table
@@ -136,49 +124,23 @@ The ```route``` command is used to manipulate the IP routing table
 route print
 ```
 
+---
+
 ### Netstat
 
 The ```netstat``` command is used to display network statistics, connections and routing tables
 
-*   Display active connections numerically
-  
-```powershell
-netstat -n
-```
 
-*  Display all active connections and listening ports numerically
-  
-```powershell
-netstat -an
-```
+|Command|Description|
+|-------|-----------|
+|netstat -n|Display active connections numerically|
+|netstat -an|Display all active connections and listening ports numerically
+|netstat -ano|Display active connections with process ID|
+|netstat -anop tcp|Show TCP connections with process information|
+|netstat -anop udp|Show UPD connections with process information|
+|netstat -nob|Display network connections with the associated executables|
+|netstat -anob|show all active connections, listening ports and associated executables.|
 
-*   Display active connections with process ID
-  
-```powershell
-netstat -ano
-```
-
-*  Show TCP connections with process information
-  
-```powershell
-netstat -anop tcp
-```
-
-*  Show UPD connections with process information
-  
-```powershell
-netstat -anop udp
-```
-
-*   Display network connections with the associated executables
-
-```powershell
-netstat -nob
-```
-
-*   show all active connections, listening ports and associated executables.
-  
-
-```powershell
-netstat -anob
+```cmd
+dism /online /add-capabilty /capabilityname:WMIC
 ```
