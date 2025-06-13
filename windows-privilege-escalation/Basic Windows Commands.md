@@ -1,31 +1,30 @@
+# Basic Windows Commands
 
-##  Change Directory
+### Change Directory
 
 ```bash
  cd \
 ```
 
-
 ```bash
 cd devnull
- ```
-
-
+```
 
 ```bash
  cd ..\
- ```
+```
 
+* Change the drive:
 
- * Change the drive:
 ```bash
  D:
- ```
+```
 
-  * To see current location:
+* To see current location:
+
 ```bash
  cd
- ```
+```
 
 * Change Directory to SystemRoot
 
@@ -33,97 +32,101 @@ cd devnull
 cd %SystemRoot%
 ```
 
-</br>
-
- ##  System Information (systeminfo)
+\
 
 
-  &emsp; Displays detailed information about the system including OS version, hardware specs, network configuration andf uptime
+### System Information (systeminfo)
+
+  Displays detailed information about the system including OS version, hardware specs, network configuration andf uptime
 
 ```bash
 systeminfo
 ```
 
-</br>
+\
 
-##  Windows Version 
 
-```bash 
+### Windows Version
+
+```bash
 ver
 ```
 
-</br>
+\
 
-##  Show Current User
+
+### Show Current User
 
 ```bash
 whoami
 ```
 
-
-*  detailed info 
+* detailed info
 
 ```bash
 whoami /all
 ```
 
-</br>
-
-## Print a message
-
- ```bash
- echo Welcome to Devnull notes
- ```   
-
-</br>
- 
- ## Display Enviornment Variables
- 
-  List all system enviornment variables and their values
-
-  ```bash
-  set 
-  ```
-
-  </br>
+\
 
 
-  ##  Display System PATH 
-  
-  shows the directories where executables files are searched when running cmmmands.
+### Print a message
 
-  ```bash
-  echo %PATH%
-  echo %SystemRoot%
-  echo %Username%
-  echo %cd%
-  ```
+```bash
+echo Welcome to Devnull notes
+```
 
-   </br>
+\
 
 
-  ##  Create a file ( > Redirection Operator)
+### Display Enviornment Variables
 
-  ```bash
-  echo "DevNull" > welcome.txt
-  ``` 
+List all system enviornment variables and their values
 
-</br>
+```bash
+set 
+```
 
-  ##  View File Contents
-
-  ```bash
-  type welcome.txt
-  ```
+\
 
 
-  </br>
+### Display System PATH
 
-  ## Define a enviornment variables
+shows the directories where executables files are searched when running cmmmands.
 
-  ```bash
+```bash
+echo %PATH%
+echo %SystemRoot%
+echo %Username%
+echo %cd%
+```
+
+\
+
+
+### Create a file ( > Redirection Operator)
+
+```bash
+echo "DevNull" > welcome.txt
+```
+
+\
+
+
+### View File Contents
+
+```bash
+type welcome.txt
+```
+
+\
+
+
+### Define a enviornment variables
+
+```bash
 set DEMO=DevNull
-  ```
+```
 
 * Retrieve the value of an enviornment variable
 
@@ -131,9 +134,10 @@ set DEMO=DevNull
 echo %DEMO%
 ```
 
-</br>
+\
 
-## dir command
+
+### dir command
 
 * Display help for dir command.
 
@@ -148,26 +152,28 @@ dir
 ```
 
 * Display Short File Names (8.3 format)
+
 ```bash
 dir /x
 ```
 
 * Display file and folder in Bare format
+
 ```bash
 dir  /s /b
 ```
 
-*  /a  =   Displays all files, including hidden and system files
-*  /a:hs = Lists only hidden and system files
-*  /b  =   shows filesnames only, without additional details
-*  /p  =   Stops output after each screenfull
-*  /s  =   List all files in all subdirectives recursively 
-*  /l  =   Converts filenames to lowercase
-*  /o:gn = sorts files with directories first, then alphabatically
-*  /v  =   shows extra information like file attributes and last access time
-*  /x  =   Displays the short (8.3) filename format
+* /a = Displays all files, including hidden and system files
+* /a:hs = Lists only hidden and system files
+* /b = shows filesnames only, without additional details
+* /p = Stops output after each screenfull
+* /s = List all files in all subdirectives recursively
+* /l = Converts filenames to lowercase
+* /o:gn = sorts files with directories first, then alphabatically
+* /v = shows extra information like file attributes and last access time
+* /x = Displays the short (8.3) filename format
 
-</br>
+\
 
 
 * List Only Hidden and System Files (recursive)
@@ -182,9 +188,10 @@ dir /A:SH /b /S
 dir /A:H /S /b
 ```
 
-</br>
+\
 
-##  Create a New folder
+
+### Create a New folder
 
 ```bash
 md NewFolder
@@ -212,9 +219,10 @@ mkdir Folder1 Folder2 Folder3
 md Parent\Child\GrandChild
 ```
 
-</br>
+\
 
-##  Delete Files and Folders
+
+### Delete Files and Folders
 
 * Delete Folder (rd or rmdir)
 
@@ -235,11 +243,11 @@ rmdir folder /q
 rmdir folder1 /s /q
 ```
 
-  + /s = deletes the specified folder and all files and subfolders inside it.
-  + /q = Quiet mode, deletes without confirmation
+* /s = deletes the specified folder and all files and subfolders inside it.
+* /q = Quiet mode, deletes without confirmation
 
+\
 
-</br>
 
 * Delete a file (del)
 
@@ -253,174 +261,174 @@ del hello.txt
 del d:\temp\filename.txt /p
 ```
 
-
 * Delete files recursively (/s /f /q)
 
 ```bash
  del /s /f /q data
 ```
 
-  * /s - Deletes all matching files in subdirectories
-  * /f - force delete read-only files.
-  * /q - Quiet mode (no confirmation)
+* /s - Deletes all matching files in subdirectories
+* /f - force delete read-only files.
+* /q - Quiet mode (no confirmation)
 
-</br>
+\
 
 
-##  Rename a File or folder(ren or rename)
+### Rename a File or folder(ren or rename)
 
 ```bash
 ren oldname newname
 rename oldname newname
 ```
 
-</br>
+\
 
-##  Display or set date and time
+
+### Display or set date and time
 
 ```bash
 date
 time
 ```
 
-</br>
+\
 
-##  Get MAC Address of the system
+
+### Get MAC Address of the system
 
 ```bash
 getmac
 ```
 
+\
 
-</br>
 
-##  Exit Command prompt
+### Exit Command prompt
 
 ```bash
 exit
 ```
 
-</br>
+\
 
-##  Change command prmpt title
+
+### Change command prmpt title
 
 ```bash
 title DevNull
 ```
 
-</br>
+\
 
-##   Displays " Press any key to continue ..." and waits for user input
+
+### Displays " Press any key to continue ..." and waits for user input
 
 ```bash
 pasue
 ```
 
-</br>
+\
 
-##  change command prompt Display
+
+### change command prompt Display
 
 ```bash
 prompt MyPrompt$
 ```
 
-</br>
+\
 
-##  Call Another Batch File (call) 
 
-runs runme.bat without stopping the current 
+### Call Another Batch File (call)
+
+runs runme.bat without stopping the current
 
 ```bash
 call c:\runme.bat
 ```
 
-</br>
+\
 
 
-##  Copying files and folders in Windows
+### Copying files and folders in Windows
 
- 1.  Basic Copying with Copy
-   
-   ```bash
-    copy /a c:\data\file.txt e:\data /v /y
-   ```
+1. Basic Copying with Copy
 
-  * /a - specifies the source file (ASCII mode).
-  * /v - verifies the copied file for accuracy.
-  * /y - suppresses confirmation prompts when overwriting existing files.
+```bash
+ copy /a c:\data\file.txt e:\data /v /y
+```
 
-  2.  Advanced copy with XCOPY
-   
-  it is more powerfull alternative to COPY for copying directories, files and subdirectories.
-  It can copy multiple files at once
+* /a - specifies the source file (ASCII mode).
+* /v - verifies the copied file for accuracy.
+* /y - suppresses confirmation prompts when overwriting existing files.
 
-  ```bash
+2. Advanced copy with XCOPY
+
+it is more powerfull alternative to COPY for copying directories, files and subdirectories.\
+It can copy multiple files at once
+
+```bash
 xcopy.exe d:\data*.* c:\test\ /a /d /p /s /v /w
-  ```
+```
 
-  * /a - Copies only files with archieve attribute.
-  * /d - Copies files modified after a specific dates
-  * /p - Prompts before copying each file.
+* /a - Copies only files with archieve attribute.
+* /d - Copies files modified after a specific dates
+* /p - Prompts before copying each file.
 * /s - copies directories and subdirectories, except empty ones.
 * /v - verifies copyied files
 * /w - waits for confirmation before starting
-
 
 ```bash
 xcopy c:\inetpub\ /s /y c:\data\
 ```
 
-copies everything from c:\inetpub (including subdirectoreis) to c:\data\
+copies everything from c:\inetpub (including subdirectoreis) to c:\data\\
 
 ```bash
 xcopy C:\inetpub\*.htm C:\htmfiles\ /s /v /y
 ```
 
+3. Robust copying with ROBOCOPY (Recommeded)\
+   &#x20;\
+   ROBOCOPY (robusty file copy) is a more powerfull tool introduced in later windows versions
 
-3.  Robust copying with ROBOCOPY (Recommeded)
-  &nbsp;
-    ROBOCOPY (robusty file copy) is a more powerfull tool introduced in later windows versions
+*   Copies all files form c:\data to C:\data1 including subdirectories.\
+    &#x20;
 
-*  Copies all files form c:\data to C:\data1 including subdirectories.
-  &nbsp;
     ```bash
     robocopy c:\data c:\data1 /s
     ```
-
-*  Copies a specific files 
-    &nbsp;
+*   Copies a specific files\
+    &#x20;
 
     ```bash
     robocopy C:\data c:\data1 img.jpg /S
     robocopy <source> <destination> <file to copy>
     ```
+*   Copy specific file types, Copies all .js, .css and .html files from C:\data to their respective folders
 
-* Copy specific file types, Copies all .js, .css and .html files from C:\data to their respective folders
+    &#x20;
 
-  &nbsp;
-
-  ```bash
-  robocopy c:\data c:\js *.js /s    
-  ```
-
-*  Copy Multiples File types
-    &nbsp;
+    ```bash
+    robocopy c:\data c:\js *.js /s    
+    ```
+*   Copy Multiples File types\
+    &#x20;
 
     ```bash
     robocopy c:\data\ c:\allfiles *.jpg *.png *.html *.txt /s
     ```
+* Additional options\
+  &#x20;
+  * /r:1 - Retries once if a file fails to copy
+  * /w:1 - Waits one second between Retries
+  * /ndl - Prevents directories from being listed in the output.
+  * /xjd - Excludes junction points (to avoid infinite loops).
 
-* Additional options
-    &nbsp;
+\
 
-    * /r:1 - Retries once if a file fails to copy
-    * /w:1 - Waits one second between Retries
-    * /ndl - Prevents directories from being listed in the output.
-    * /xjd - Excludes junction points (to avoid infinite loops).
 
-</br>
-
-##  Changing File and Folder Attributes Using ATTRIB
+### Changing File and Folder Attributes Using ATTRIB
 
 The ATTRIB command in windows allows users to modify file and folder such as hidden, system, Read-only and archieve
 
@@ -440,10 +448,11 @@ attrib /?
 * +S/-S - Adds/Removes the System Attributes
 * +R/-R - Adds/Removes the Read-Only attribute
 * +A/-A - Adds/Removes the Archieve attribute
-* /S  - Applies changes to all subdirectories
-* /D  - Applies changes to directories
+* /S - Applies changes to all subdirectories
+* /D - Applies changes to directories
 
-</br>
+\
+
 
 * Modifying File Attributes, make a file Hidden, System and Read-Only
 
@@ -472,7 +481,6 @@ attrib +s +h +r e:\* /S /D
 attrib -s -h -r c:\data\* /s
 ```
 
-
 * Unhiding all files on a drive
 
 ```bash
@@ -485,27 +493,25 @@ attrib -h -s -r *.* /s /d
 attrib +r important.docx
 ```
 
+\
 
-</br>
 
-##  Restarting a Windows System immediately without any delay
+### Restarting a Windows System immediately without any delay
 
 ```bash
 shutdown /r /t 0 /f
 ```
-* __/s__ - shutdown the computer
-* __/r__ - Restart the computer
-* __/t 0__ - set the time delay to 0 seconds(immediate restart) 
-* __/f__ - force close all running applications without warning
 
-</br>
+* **/s** - shutdown the computer
+* **/r** - Restart the computer
+* **/t 0** - set the time delay to 0 seconds(immediate restart)
+* **/f** - force close all running applications without warning
+
+\
+
 
 * Allow user to cancel shutdown
 
 ```bash
 shutdown /a
 ```
-
-
-
-
