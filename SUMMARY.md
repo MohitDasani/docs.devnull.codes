@@ -1,6 +1,8 @@
 # Table of contents
 
 * [README](README.md)
+* [OSCPCheatSheet](OSCP-Cheatsheet/README.md)
+  * [Scanning](OSCP-Cheatsheet/Scanning.md)
 * [windows-privilege-escalation](windows-privilege-escalation/README.md)
   * [Windows Privilege Escalation](<windows-privilege-escalation/Windows Privilege Escalation.md>)
   * [Windows Version and Configuration Cheatsheet](<windows-privilege-escalation/Windows Version and Configuration Cheatsheet.md>)
